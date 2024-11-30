@@ -33,12 +33,4 @@ fn similarity(text0: &str, text1: &str) -> Result<(Atom, f64), Error> {
     Ok((atoms::ok(), similarity))
 }
 
-rustler::init!(
-    "Elixir.SpiritFingers.SimHash",
-    [
-        similarity_hash,
-        hamming_distance,
-        hash_similarity,
-        similarity
-    ]
-);
+rustler::init!("Elixir.SpiritFingers.SimHash");
